@@ -8,10 +8,14 @@ let app = new (require('express'))();
 let port = 3000;
 let compiler = webpack(config);
 
-app.use(webpackDevMiddleware(compiler, {noInfo: true, publicPath: config.output.publicPath}));
+app.use(webpackDevMiddleware(compiler, {
+  noInfo: true,
+  publicPath: config.output.publicPath
+}));
+
 app.use(webpackHotMiddleware(compiler));
 
-app.get("/", function (req, res) {
+app.get("/*", function (req, res) {
   res.sendFile(__dirname + '/index.html')
 });
 
