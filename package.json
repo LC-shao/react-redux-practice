@@ -8,6 +8,7 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "node-uuid": "^1.4.8",
+    "normalizr": "^2.1.0",
     "path-to-regexp": "^1.7.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
