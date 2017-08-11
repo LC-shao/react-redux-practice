@@ -3,21 +3,21 @@ import {connect} from "react-redux";
 import {addTodo} from "../actions/index";
 
 let AddTodo = ({dispatch}) => {
-  let input;
+	let input;
 
-  return (
-	  <div>
-		<input ref={node => {
-		  input = node;
-		}}/>
-		<button onClick={() => {
-		  dispatch(addTodo(input.value));
-		  input.value = '';
-		}}>
-		  Add Todo
-		</button>
-	  </div>
-  );
+	return (
+		<div>
+			<input ref={node => {
+				input = node;
+			}}/>
+			<button onClick={() => {
+				dispatch(addTodo(input.value));
+				input.value = '';
+			}}>
+				Add Todo
+			</button>
+		</div>
+	);
 };
 
 AddTodo = connect()(AddTodo);
